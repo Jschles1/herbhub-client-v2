@@ -18,13 +18,19 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(inter.className, 'min-h-screen flex flex-col')}>
         <div className="flex items-center h-[60px] px-4 py-2 border-b-gray-200 border-b">
-          Header
+          <div className="flex items-center max-w-7xl w-full mx-auto">
+            Header
+          </div>
         </div>
-        <main className="flex flex-col items-center justify-between flex-1 bg-gray-100 p-4">
-          {children}
+        <main className="flex-1 bg-gray-100 p-4">
+          <div className="flex flex-col items-center justify-between mx-auto max-w-7xl">
+            {children}
+          </div>
         </main>
         <div className="flex items-center h-[100px] px-4 py-2 border-t border-t-gray-200">
-          Footer
+          <div className="flex items-center mx-auto max-w-7xl w-full">
+            Footer
+          </div>
         </div>
       </body>
     </html>

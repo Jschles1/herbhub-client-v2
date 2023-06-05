@@ -1,5 +1,5 @@
 import Image from 'next/image';
 
 export default function Home() {
-  return <div>Text</div>;
+  return <div className="w-full">Text</div>;
 }
