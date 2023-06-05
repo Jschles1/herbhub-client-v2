@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={cn(inter.className, 'min-h-screen flex flex-col')}>
         <div className="flex items-center h-[60px] px-4 py-2 border-b-gray-200 border-b">
           <div className="flex items-center max-w-7xl w-full mx-auto">
-            Header
+            Jersey Herb Hub
           </div>
         </div>
         <main className="flex-1 bg-gray-100 p-4">
