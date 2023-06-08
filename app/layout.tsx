@@ -1,3 +1,4 @@
+import Providers from '@/components/providers';
 import { cn } from '@/lib/utils';
 import './globals.css';
 import { Inter } from 'next/font/google';
@@ -24,7 +25,7 @@ export default function RootLayout({
         </div>
         <main className="flex-1 bg-gray-100 p-4">
           <div className="flex flex-col items-center justify-between mx-auto max-w-7xl">
-            {children}
+            <Providers>{children}</Providers>
           </div>
         </main>
         <div className="flex items-center h-[100px] px-4 py-2 border-t border-t-gray-200">
