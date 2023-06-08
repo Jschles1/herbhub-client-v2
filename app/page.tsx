@@ -1,15 +1,11 @@
-import CategoryFilter from '@/components/category-filter';
-import ProductList from '@/components/product-list';
-import ProductListActions from '@/components/product-list-actions';
+import { PageProps } from '@/lib/interfaces';
+import HomeTemplate from '@/components/templates/home-template';
+import getProducts from '@/lib/api/getProducts';
 
-export default function Home() {
-  return (
-    <div className="w-full h-full flex">
-      <CategoryFilter />
-      <div className="flex-1 ml-4">
-        <ProductListActions />
-        <ProductList />
-      </div>
-    </div>
-  );
+export default async function Home({ params, searchParams }: PageProps) {
+  const data = await getProducts({
+    queryKey: ['getDispensaryProducts', 'all'],
+    meta: {},
+  });
+  return <HomeTemplate initialData={data} />;
 }
