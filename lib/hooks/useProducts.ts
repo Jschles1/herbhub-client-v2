@@ -6,7 +6,7 @@ export default function useProductData(initialData: any) {
   const [params] = useQueryParams();
   return useQuery({
     queryKey: ['getDispensaryProducts', params],
-    queryFn: getProducts,
+    queryFn: () => getProducts(params),
     refetchOnWindowFocus: false,
     refetchOnMount: false,
     refetchOnReconnect: false,

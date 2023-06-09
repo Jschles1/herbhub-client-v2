@@ -3,9 +3,7 @@ import HomeTemplate from '@/components/templates/home-template';
 import getProducts from '@/lib/api/getProducts';
 
 export default async function Home({ params, searchParams }: PageProps) {
-  const data = await getProducts({
-    queryKey: ['getDispensaryProducts', 'all'],
-    meta: {},
-  });
+  console.log('HOME SERVER RENDER');
+  const data = await getProducts();
   return <HomeTemplate initialData={data} />;
 }

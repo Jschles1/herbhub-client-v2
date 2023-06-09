@@ -9,6 +9,7 @@ import useProductData from '@/lib/hooks/useProducts';
 
 export default function HomeTemplate(props: { initialData: any }) {
   const { data } = useProductData(props.initialData);
+  console.log('RETURNED DATA', data);
   return (
     <div className="w-full h-full flex">
       <CategoryFilter />

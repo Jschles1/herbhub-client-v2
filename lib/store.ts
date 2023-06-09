@@ -88,12 +88,13 @@ const reducer = (state: string, action: Action) => {
     case 'search':
     case 'filter':
     case 'sortBy':
-      return createURLParams(
+      const result = createURLParams(
         state,
         action.type,
         action.payload.value,
         action.payload.checked
       );
+      return result;
     case 'reset':
     default:
       return initialState;
