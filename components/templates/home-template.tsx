@@ -1,7 +1,6 @@
 'use client';
 
 import * as React from 'react';
-import { useQuery } from '@tanstack/react-query';
 import CategoryFilter from '../category-filter';
 import ProductListActions from '../product-list-actions';
 import ProductList from '../product-list';
@@ -11,13 +10,13 @@ export default function HomeTemplate(props: { initialData: any }) {
   const { data } = useProductData(props.initialData);
   console.log('RETURNED DATA', data);
   return (
-    <div className="w-full h-full flex">
+    <div className="w-full h-full lg:flex">
       <CategoryFilter />
-      <div className="flex-1 ml-4">
+      <div className="flex-1 lg:ml-4">
         <ProductListActions />
         <ProductList />
       </div>
-      {JSON.stringify(data)}
+      {/* {JSON.stringify(data)} */}
     </div>
   );
 }
