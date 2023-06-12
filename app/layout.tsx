@@ -2,6 +2,7 @@ import Providers from '@/components/providers';
 import { cn } from '@/lib/utils';
 import './globals.css';
 import { Inter } from 'next/font/google';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,7 +21,7 @@ export default function RootLayout({
       <body className={cn(inter.className, 'min-h-screen flex flex-col')}>
         <div className="flex items-center h-[60px] px-4 py-2 border-b-gray-200 border-b">
           <div className="flex items-center max-w-7xl w-full mx-auto">
-            Jersey Herb Hub
+            <Link href="/">Jersey Herb Hub</Link>
           </div>
         </div>
         <main className="flex-1 bg-gray-100 p-4">
