@@ -6,7 +6,7 @@ export default async function getProducts(param?: string): Promise<any> {
     const queryParams = param && param.length ? `?${param}` : '';
     let domain = process.env.API_DOMAIN + '/';
     if (domain === 'undefined/') {
-      domain = '';
+      domain = '/';
     }
     const url = `${domain}getProducts${queryParams}`;
     console.log('2. REQUEST URL', url);
