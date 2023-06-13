@@ -9,7 +9,15 @@ export default async function getProducts(param?: string): Promise<any> {
       domain = '/';
     }
     const url = `${domain}getProducts${queryParams}`;
+    const fetchUrl = `/getProducts${queryParams}`;
     console.log('2. REQUEST URL', url);
+    console.log('2. FETCH URL', fetchUrl);
+
+    // const response = await fetch(fetchUrl, { cache: 'no-store' });
+    // const data = await response.json();
+    // console.log('3. RESPONSE', data);
+    // return data;
+
     const response = await axios.get(url);
     const data = response.data;
     console.log('5. RESPONSE', data);
