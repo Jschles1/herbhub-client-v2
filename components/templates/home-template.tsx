@@ -9,7 +9,7 @@ import { Product } from '@prisma/client';
 
 export default function HomeTemplate(props: { initialData: Product[] }) {
   const { data } = useProductData(props.initialData);
-  console.log('RETURNED DATA', data);
+  console.log('CLIENT DATA', data);
   return (
     <div className="w-full h-full lg:flex">
       <CategoryFilter />

@@ -17,5 +17,7 @@ export default async function Home({ params, searchParams }: PageProps) {
 
   await prisma.$disconnect();
 
+  console.log('NETWORK BOUNDARY');
+
   return <HomeTemplate initialData={products} />;
 }
