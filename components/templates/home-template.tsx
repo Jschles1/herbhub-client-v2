@@ -15,7 +15,7 @@ export default function HomeTemplate(props: { initialData: Product[] }) {
       <CategoryFilter />
       <div className="flex-1 lg:ml-4">
         <ProductListActions />
-        <ProductList />
+        <ProductList products={data} />
       </div>
     </div>
   );
