@@ -1,9 +1,21 @@
+import { PrismaClient } from '@prisma/client';
 import { PageProps } from '@/lib/interfaces';
 import HomeTemplate from '@/components/templates/home-template';
 
+const prisma = new PrismaClient();
+
 export default async function Home({ params, searchParams }: PageProps) {
   console.log('HOME SERVER RENDER');
-  const data = { message: 'Hello from the server render', params: '' };
-  console.log('DATA', data);
-  return <HomeTemplate initialData={data} />;
+  // TODO: Add search params to query from request URL if possible
+  await prisma.$connect();
+
+  let products = await prisma.product.findMany({
+    take: 10,
+    // where: whereInput,
+    // orderBy: orderByInputs,
+  });
+
+  await prisma.$disconnect();
+
+  return <HomeTemplate initialData={products} />;
 }

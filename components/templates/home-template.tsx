@@ -16,7 +16,6 @@ export default function HomeTemplate(props: { initialData: any }) {
         <ProductListActions />
         <ProductList />
       </div>
-      {/* {JSON.stringify(data)} */}
     </div>
   );
 }

@@ -12,10 +12,10 @@ export default function CategoryFilter() {
     console.log('CLICKED', event.target);
 
     // Test action
-    // await dispatch({
-    //   type: 'filter',
-    //   payload: { value: 'str/indica', checked: true },
-    // });
+    await dispatch({
+      type: 'filter',
+      payload: { value: 'str/indica', checked: true },
+    });
   }
 
   return (

@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Product {
+  id                String       @id @default(auto()) @map("_id") @db.ObjectId
+  dispensaryName    String
+  dispensaryLocation String
+  strain            String
+  strainType        String
+  categoryType      String
+  description       String
+  lowestPrice       Float
+  prices            Json
+  quantity          Int?
+  image             String?
+  brand             String
+  url               String?
+  thc               Float?
+  cbd               Float?
+}
